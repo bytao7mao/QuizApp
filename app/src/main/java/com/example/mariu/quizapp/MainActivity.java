@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     RadioButton q1a3;
     RadioButton q2a1;
     RadioButton q3aTrue;
-    RadioButton q4aTrue;
+    RadioButton q4aFalse;
     EditText q5Edit;
     CheckBox q6a1;
     CheckBox q7a4;
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         q1a3 = findViewById(R.id.questionOneAnswerThree_radio);
         q2a1 = findViewById(R.id.questionTwoAnswerOne_radio);
         q3aTrue = findViewById(R.id.questionThreeAnswerTrue_radio);
-        q4aTrue = findViewById(R.id.questionFourAnswerTrue_radio);
+        q4aFalse = findViewById(R.id.questionFourAnswerFalse_radio);
         q5Edit = findViewById(R.id.questionFive_editText);
         q6a1 = findViewById(R.id.questionSixAnswerOne_checkbox);
         q7a4 = findViewById(R.id.questionSixAnswerFour_checkbox);
@@ -37,11 +37,10 @@ public class MainActivity extends AppCompatActivity {
         if (q1a3.isChecked()){totalPoints++;}
         if (q2a1.isChecked()){totalPoints++;}
         if (q3aTrue.isChecked()){totalPoints++;}
-        if (!q4aTrue.isChecked()){totalPoints++;}
+        if (q4aFalse.isChecked()){totalPoints++;}
         String q5String = q5Edit.getText().toString();
-        if (q5String.equals("double")){totalPoints++;}
+        if (q5String.equalsIgnoreCase("double")){totalPoints++;}
         if((q6a1.isChecked()) && (q7a4.isChecked())){totalPoints++;}
-
 
         // 0 points
         String Zero = getResources().getString(R.string.toast0);

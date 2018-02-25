@@ -250,10 +250,12 @@
                 android:layout_height="wrap_content"
                 android:text="@string/question_six_answer_one" />
             <CheckBox
+                android:id="@+id/questionSixAnswerTwo_checkbox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/question_six_answer_two" />
             <CheckBox
+                android:id="@+id/questionSixAnswerThree_checkbox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/question_six_answer_three" />

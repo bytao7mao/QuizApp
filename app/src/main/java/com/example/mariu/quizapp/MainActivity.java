@@ -8,6 +8,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
+
 import com.shashank.sony.fancytoastlib.FancyToast;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     RadioButton q4aFalse;
     EditText q5Edit;
     CheckBox q6a1;
+    CheckBox q6a2;
+    CheckBox q6a3;
     CheckBox q7a4;
 
     @Override
@@ -31,17 +34,32 @@ public class MainActivity extends AppCompatActivity {
         q4aFalse = findViewById(R.id.questionFourAnswerFalse_radio);
         q5Edit = findViewById(R.id.questionFive_editText);
         q6a1 = findViewById(R.id.questionSixAnswerOne_checkbox);
+        q6a2 = findViewById(R.id.questionSixAnswerTwo_checkbox);
+        q6a3 = findViewById(R.id.questionSixAnswerThree_checkbox);
         q7a4 = findViewById(R.id.questionSixAnswerFour_checkbox);
     }
 
-    public void submitAnswers(View view){
-        if (q1a3.isChecked()){totalPoints++;}
-        if (q2a1.isChecked()){totalPoints++;}
-        if (q3aTrue.isChecked()){totalPoints++;}
-        if (q4aFalse.isChecked()){totalPoints++;}
+    public void submitAnswers(View view) {
+        totalPoints = 0;
+        if (q1a3.isChecked()) {
+            totalPoints++;
+        }
+        if (q2a1.isChecked()) {
+            totalPoints++;
+        }
+        if (q3aTrue.isChecked()) {
+            totalPoints++;
+        }
+        if (q4aFalse.isChecked()) {
+            totalPoints++;
+        }
         String q5String = q5Edit.getText().toString();
-        if (q5String.equalsIgnoreCase("double")){totalPoints++;}
-        if((q6a1.isChecked()) && (q7a4.isChecked())){totalPoints++;}
+        if (q5String.equalsIgnoreCase("double")) {
+            totalPoints++;
+        }
+        if ((q6a1.isChecked() && q7a4.isChecked()) && (!q6a2.isChecked() && !q6a3.isChecked())) {
+            totalPoints++;
+        }
 
         // 0 points
         String Zero = getResources().getString(R.string.toast0);
@@ -55,22 +73,26 @@ public class MainActivity extends AppCompatActivity {
         String msgPro = getResources().getString(R.string.toast3);
         String msgForPro = String.format(msgPro, totalPoints);
 
-        if (totalPoints == 0){
+        if (totalPoints == 0) {
             //Toast.makeText(this, Zero,Toast.LENGTH_LONG).show();
-            FancyToast.makeText(this, Zero,FancyToast.LENGTH_LONG,FancyToast.WARNING,true).show();
+            FancyToast.makeText(this, Zero, FancyToast.LENGTH_LONG, FancyToast.WARNING, true).show();
         } else if (totalPoints == 1 || totalPoints == 2) {
             //Toast.makeText(this, msgForNoob,Toast.LENGTH_LONG).show();
-            FancyToast.makeText(this, msgForNoob,FancyToast.LENGTH_LONG,FancyToast.WARNING,true).show();
+            FancyToast.makeText(this, msgForNoob, FancyToast.LENGTH_LONG, FancyToast.WARNING, true).show();
         } else if (totalPoints == 3 || totalPoints == 4) {
             //Toast.makeText(this, msgForNab,Toast.LENGTH_LONG).show();
-            FancyToast.makeText(this, msgForNab,FancyToast.LENGTH_LONG,FancyToast.INFO,true).show();
+            FancyToast.makeText(this, msgForNab, FancyToast.LENGTH_LONG, FancyToast.INFO, true).show();
         } else if (totalPoints == 5 || totalPoints == 6) {
             //Toast.makeText(this, msgForPro,Toast.LENGTH_LONG).show();
-            FancyToast.makeText(this, msgForPro,FancyToast.LENGTH_LONG,FancyToast.SUCCESS,true).show();
+            FancyToast.makeText(this, msgForPro, FancyToast.LENGTH_LONG, FancyToast.SUCCESS, true).show();
         }
+        reset(view, totalPoints);
+
     }
-    public void reset(View view) {
-        totalPoints = 0;
+
+    public void reset(View view, int total) {
+        total = 0;
+        totalPoints = total;
         //reseting the activity of the app
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

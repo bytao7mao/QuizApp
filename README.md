@@ -6,4 +6,4 @@
 <br><br>
 <br><img align="top" width="500" src="asset/ss2.png" alt="ss2" />
 <br><br>
-<br><img align="top" width="500" src="asset/ss2.png" alt="ss3" />
+<br><img align="top" width="500" src="asset/ss3.png" alt="ss3" />

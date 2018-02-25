@@ -8,6 +8,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
+import com.shashank.sony.fancytoastlib.FancyToast;
 
 public class MainActivity extends AppCompatActivity {
     int totalPoints;
@@ -55,23 +56,24 @@ public class MainActivity extends AppCompatActivity {
         String msgForPro = String.format(msgPro, totalPoints);
 
         if (totalPoints == 0){
-            Toast.makeText(this, Zero,Toast.LENGTH_LONG).show();
+            //Toast.makeText(this, Zero,Toast.LENGTH_LONG).show();
+            FancyToast.makeText(this, Zero,FancyToast.LENGTH_LONG,FancyToast.WARNING,true).show();
         } else if (totalPoints == 1 || totalPoints == 2) {
-            Toast.makeText(this, msgForNoob,Toast.LENGTH_LONG).show();
+            //Toast.makeText(this, msgForNoob,Toast.LENGTH_LONG).show();
+            FancyToast.makeText(this, msgForNoob,FancyToast.LENGTH_LONG,FancyToast.WARNING,true).show();
         } else if (totalPoints == 3 || totalPoints == 4) {
-            Toast.makeText(this, msgForNab,Toast.LENGTH_LONG).show();
+            //Toast.makeText(this, msgForNab,Toast.LENGTH_LONG).show();
+            FancyToast.makeText(this, msgForNab,FancyToast.LENGTH_LONG,FancyToast.INFO,true).show();
         } else if (totalPoints == 5 || totalPoints == 6) {
-            Toast.makeText(this, msgForPro,Toast.LENGTH_LONG).show();
+            //Toast.makeText(this, msgForPro,Toast.LENGTH_LONG).show();
+            FancyToast.makeText(this, msgForPro,FancyToast.LENGTH_LONG,FancyToast.SUCCESS,true).show();
         }
     }
-
     public void reset(View view) {
         totalPoints = 0;
         //reseting the activity of the app
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
-
-
 
 }

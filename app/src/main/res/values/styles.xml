@@ -8,13 +8,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="CasualTextViewStyle." parent="android:Widget.TextView">
-        <item name="fontFamily">casual</item>
-    </style>
+    <!--<style name="CasualTextViewStyle." parent="android:Widget.TextView">-->
+        <!--<item name="fontFamily">casual</item>-->
+    <!--</style>-->
 
-    <style name="CasualTextViewStyle" parent="android:Widget.Holo.Button">
-        <item name="fontFamily">casual</item>
-    </style>
+    <!--<style name="CasualTextViewStyle" parent="android:Widget.Holo.Button">-->
+        <!--<item name="fontFamily">casual</item>-->
+    <!--</style>-->
 
 
 

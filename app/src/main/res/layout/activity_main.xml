@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D7CCC8"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -18,22 +18,21 @@
             android:id="@+id/film_image_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scaleType="fitStart"
             android:adjustViewBounds="true"
+            android:scaleType="fitStart"
             android:src="@drawable/java" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#FFEB3B" />
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="2dp"-->
+            <!--android:background="#FFEB3B" />-->
 
         <TextView
             android:id="@+id/app_title_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="24sp"
+            android:textSize="34sp"
             android:textColor="@color/colorPrimary"
             android:text="@string/title_name"
-            android:fontFamily="casual"
             android:textAppearance="?android:textAppearanceLarge"
             android:layout_marginTop="5dp"
             android:gravity="center_horizontal"
@@ -43,8 +42,8 @@
             android:id="@+id/subtitle_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
             android:text="@string/subtitle"
-            android:fontFamily="casual"
             android:textAppearance="?android:textAppearanceMedium"
             android:layout_marginBottom="5dp"
             android:gravity="center_horizontal"/>
@@ -63,7 +62,6 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
                 android:text="@string/q1"
                 android:textColor="#FF5252"
                 android:textStyle="bold" />
@@ -72,7 +70,6 @@
                 android:layout_height="wrap_content"
                 android:background="#FFEB3B"
                 android:text="@string/question_one"
-                android:fontFamily="casual"
                 android:textStyle="bold"/>
 
             <RadioGroup
@@ -109,7 +106,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/q2"
-                android:fontFamily="casual"
                 android:textStyle="bold"
                 android:textColor="#FF5252" />
             <TextView
@@ -117,7 +113,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/question_two"
                 android:background="#FFEB3B"
-                android:fontFamily="casual"
                 android:textStyle="bold"/>
 
             <RadioGroup
@@ -154,14 +149,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/q3"
-                android:fontFamily="casual"
                 android:textStyle="bold"
                 android:textColor="#FF5252" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#FFEB3B"
-                android:fontFamily="casual"
                 android:text="@string/question_three"/>
             <RadioGroup
                 android:layout_width="match_parent"
@@ -188,7 +181,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/q4"
-                android:fontFamily="casual"
                 android:textStyle="bold"
                 android:textColor="#FF5252" />
             <TextView
@@ -220,14 +212,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/q5"
-                android:fontFamily="casual"
                 android:textStyle="bold"
                 android:textColor="#FF5252" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#FFEB3B"
-                android:fontFamily="casual"
                 android:text="@string/question_five"/>
             <EditText
                 android:id="@+id/questionFive_editText"
@@ -247,13 +237,11 @@
                 android:layout_height="wrap_content"
                 android:textColorHighlight="#9c27B0"
                 android:text="@string/q6"
-                android:fontFamily="casual"
                 android:textStyle="bold"
                 android:textColor="#FF5252" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
                 android:background="#FFEB3B"
                 android:text="@string/question_six"/>
             <CheckBox
@@ -282,11 +270,11 @@
 
             <Button
                 android:id="@+id/submit_answers"
-                android:layout_marginTop="50dp"
                 android:layout_width="120dp"
-                android:layout_height="35dp"
+                android:layout_height="40dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
                 android:background="@android:color/holo_blue_bright"
                 android:onClick="submitAnswers"
                 android:text="@string/score_button" />
@@ -294,7 +282,7 @@
             <Button
                 android:id="@+id/reset"
                 android:layout_width="100dp"
-                android:layout_height="20dp"
+                android:layout_height="40dp"
                 android:layout_below="@id/submit_answers"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="25dp"
@@ -309,3 +297,4 @@
     </LinearLayout>
 
 </ScrollView>
+

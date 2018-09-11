@@ -13,15 +13,10 @@ import com.shashank.sony.fancytoastlib.FancyToast;
 
 public class MainActivity extends AppCompatActivity {
     int totalPoints;
-    RadioButton q1a3;
-    RadioButton q2a1;
-    RadioButton q3aTrue;
-    RadioButton q4aFalse;
+    RadioButton q1a3,q2a1,q3aTrue,q4aFalse;
     EditText q5Edit;
-    CheckBox q6a1;
-    CheckBox q6a2;
-    CheckBox q6a3;
-    CheckBox q7a4;
+    CheckBox q6a1,q6a2,q6a3,q7a4;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         q6a2 = findViewById(R.id.questionSixAnswerTwo_checkbox);
         q6a3 = findViewById(R.id.questionSixAnswerThree_checkbox);
         q7a4 = findViewById(R.id.questionSixAnswerFour_checkbox);
+        //to do marry me question
+
     }
 
     public void submitAnswers(View view) {

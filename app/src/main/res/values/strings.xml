@@ -1,6 +1,6 @@
-<resources>
+﻿<resources>
     <string name="app_name">Quiz App</string>
-    <string name="title_name">Java quiz</string>
+    <string name="title_name">Java quiz for Swathi :D</string>
     <string name="subtitle">Test your junior level knowledge of Java Programming language now !</string>
     <string name="q1">Question 1:</string>
     <string name="q2">Question 2:</string>
